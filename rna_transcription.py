@@ -1,2 +1,12 @@
 def to_rna(dna_strand):
-    pass
+    dna={
+        "A": "U",
+        "C" : "G",
+        "G" : "C",
+        "T" : "A"
+    }
+    rna=""
+    for x in dna_strand:
+        if x in dna.keys():
+            rna+=dna[x]
+    return rna
